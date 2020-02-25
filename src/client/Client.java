@@ -23,6 +23,12 @@ public class Client {
         String serverResponse = "";
         
         while(!userInput.equals("Disconnect")){
+            System.out.print("Desired username: ");
+            userInput = input.readLine();
+            output.writeUTF(userInput);
+            serverResponse = inputFromServer.readUTF();
+            System.out.println(serverResponse);
+            System.out.print("Desired password: ");
             userInput = input.readLine();
             output.writeUTF(userInput);
             serverResponse = inputFromServer.readUTF();
