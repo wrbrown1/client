@@ -22,6 +22,10 @@ public class Client {
         String userInput = "";
         String serverResponse = "";
         
+        //this is what I'd imagine the GUI would be most concerned with
+        //this while loop reads a string from the server, the sends a string to the server
+        //serverResponse = string read from server
+        //userInput = string sent to server
         while(!userInput.equals("Disconnect")){
             serverResponse = inputFromServer.readUTF();
             System.out.println(serverResponse);
